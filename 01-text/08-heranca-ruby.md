@@ -104,5 +104,25 @@
     linha
     f.imprime(5)
     linha
+
+    variasProgressoes = [
+        Aritmetica.new(1, 6),
+        Progressao.new(2),
+        Fibonacci.new(1, 1),
+        Geometrica.new(1, 2),
+        Fibonacci.new(7, 9),
+        Geometrica.new(3, 3),
+        Progressao.new(4),
+        Geometrica.new(5, 1),
+        Geometrica.new(2, 2.3)
+    ]
+
+    def moldura
+        print "["
+        yield
+        puts "]"
+    end
+
+    variasProgressoes.each {|p| moldura {p.imprime(5)}}
     ```
 
